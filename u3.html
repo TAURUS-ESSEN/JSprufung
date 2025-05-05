@@ -11,9 +11,11 @@
     <div class="randomImgContainer"><img id="randomFoto" src="" alt="random image"></div>
 
     <script>
-        let imgArray = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"]
-        let randomFoto = Math.floor(Math.random() * 4)+ 1;
+        let imgArray = ["morgen.png", "tag.png", "abend.png", "nacht.png"]
+        let randomFotoId = Math.floor(Math.random() * imgArray.length);
         console.log(randomFoto) 
-        const img = 
+        console.log(imgArray[randomFotoId])
+        const img = document.getElementById("randomFoto");
+        randomFoto.src = `img/${imgArray[randomFotoId]}`
     </script>
 </html>
