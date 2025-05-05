@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="currentTime"></div>
+
+    <script>
+        const zeitContainer = document.getElementById("currentTime");
+
+function showTime() {
+    let jetzt = new Date()
+    let time = jetzt.toLocaleTimeString("de-DE", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    })
+    return time
+}
+zeitContainer.textContent = showTime();
+setInterval(function() {
+    zeitContainer.textContent = showTime();
+}, 1000);
+    </script>
+</body>
+</html>
