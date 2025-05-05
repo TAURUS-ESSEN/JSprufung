@@ -4,18 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .wrapper {
+            margin: 10% auto;
+            max-width: 600px;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 
 </body>
-    <div class="randomImgContainer"><img id="randomFoto" src="" alt="random image"></div>
+
+    <div class="wrapper">
+        <img id="randomFoto" src="" alt="random image">
+    </div>
 
     <script>
         let imgArray = ["morgen.png", "tag.png", "abend.png", "nacht.png"]
         let randomFotoId = Math.floor(Math.random() * imgArray.length);
-        console.log(randomFoto) 
-        console.log(imgArray[randomFotoId])
         const img = document.getElementById("randomFoto");
-        randomFoto.src = `https://taurus-essen.github.io/JSprufung/img/${imgArray[randomFotoId]}`
+        img.src = `https://taurus-essen.github.io/JSprufung/img/${imgArray[randomFotoId]}`
     </script>
 </html>
